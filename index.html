@@ -57,58 +57,76 @@
         <section class="restaurant">
             <div class="container">
                 <h2>Restaurants</h2>
-                <!-- Restaurant 1: La palette du gout -->
-                <div class="restaurant-card">
-                    <div class="restaurant-card__image-container">
-                        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du gout">
+                <div class="restaurant-card-group">
+                    <!-- Restaurant 1: La palette du gout -->
+                    <div class="restaurant-card">
+                        <a href="#">
+                            <div class="restaurant-card__image-container">
+                                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du gout">
+                            </div>
+                            <div class="restaurant-card__total">
+                                <div class="restaurant-card__text-description">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <div class="heart-logo">
+                                    <i class="fas fa-heart"></i>
+                                </div>    
+                            </div>
+                            <p class="green-sticker">Nouveau</p>
+                        </a>
                     </div>
-                    <div class="restaurant-card__description">
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
+                    <!-- Restaurant 2: La note enchantée -->
+                    <div class="restaurant-card">
+                        <a href="#">
+                            <div class="restaurant-card__image-container">
+                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant La note enchantée">
+                            </div>
+                            <div class="restaurant-card__total">
+                                <div class="restaurant-card__text-description">
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </div>
+                                <div class="heart-logo">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <p class="green-sticker">Nouveau</p>    
+                        </a>
                     </div>
-                    <div>
-                        <i class="fas fa-heart"></i>
+                    <!-- Restaurant 3: A la francaise -->
+                    <div class="restaurant-card">
+                        <a href="#">
+                            <div class="restaurant-card__image-container">
+                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant A la française">
+                            </div>
+                            <div class="restaurant-card__total">
+                                <div class="restaurant-card__text-description">
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </div>
+                                <div class="heart-logo">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <p>Nouveau</p>
-                </div>
-                <!-- Restaurant 2: La note enchantée -->
-                <div class="restaurant-card">
-                    <div class="restaurant-card__image-container">
-                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant La note enchantée">
-                    </div>
-                    <div class="restaurant-card__description">
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <p>Nouveau</p>
-                </div>
-                <!-- Restaurant 3: A la francaise -->
-                <div class="restaurant-card">
-                    <div class="restaurant-card__image-container">
-                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant A la française">
-                    </div>
-                    <div class="restaurant-card__description">
-                        <h3>À la française</h3>
-                        <p>Cité Rouge</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <!-- Restaurant 4: Le délice des sens -->
-                <div class="restaurant-card">
-                    <div class="restaurant-card__image-container">
-                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant A la française">
-                    </div>
-                    <div class="restaurant-card__description">
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-heart"></i>
+                    <!-- Restaurant 4: Le délice des sens -->
+                    <div class="restaurant-card">
+                        <a href="#">
+                            <div class="restaurant-card__image-container">
+                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant A la française">
+                            </div>
+                            <div class="restaurant-card__total">
+                                <div class="restaurant-card__text-description">
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                                <div class="heart-logo">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>                        
+                        </a>
                     </div>
                 </div>
             </div>
@@ -117,7 +135,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>ohmyfood</p>
+            <p class="logo-title">ohmyfood</p>
             <div>
                 <p><i class="fas fa-utensils"></i></p>
                 <p>Proposer un restaurant</p>
