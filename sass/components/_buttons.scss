@@ -1,0 +1,12 @@
+button {
+    margin-bottom: 50px;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    @include shadow-card;
+    cursor: pointer;
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
+}

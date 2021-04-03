@@ -30,9 +30,22 @@ h3 {
   font-weight: 400;
 }
 
+button {
+  margin-bottom: 50px;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+}
+
 .restaurant {
   background-color: #F6F6F6;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 .restaurant h2 {
   padding: 30px 0 20px 0;
@@ -43,6 +56,7 @@ h3 {
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .restaurant .restaurant-card-group .restaurant-card__image-container {
   width: 100%;
@@ -83,7 +97,6 @@ header {
   justify-content: center;
   align-items: center;
   height: 50px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 header .logo {
   width: 150px;
@@ -148,6 +161,7 @@ header .logo img {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 1px 3px 0px grey inset;
   padding: 15px;
   background-color: #dddddd;
 }
@@ -156,23 +170,11 @@ header .logo img {
 }
 .location h2 {
   padding: 30px 0 10px 0;
-  width: 250px;
   margin: 0 auto;
 }
 .location h3 {
   padding: 0 15px 25px 15px;
   font-size: 17px;
-}
-.location button {
-  margin-bottom: 50px;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 25px;
-  color: white;
-  font-weight: 500;
-  font-size: 15px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
 }
 
 footer {
@@ -180,13 +182,26 @@ footer {
   padding: 25px 0;
   color: white;
 }
-footer .container div {
+footer a {
+  color: white;
+}
+footer .container div .footer-link {
   display: flex;
 }
-footer .container .logo-title {
+footer .logo-footer-title {
   font-family: "Shrikhand", cursive, sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 17px;
+  padding-bottom: 15px;
+}
+footer .logo-footer {
+  width: 20px;
+}
+footer .logo-footer i {
+  font-size: 11px;
+}
+footer .footer-link {
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

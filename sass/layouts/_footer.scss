@@ -2,14 +2,29 @@ footer {
     background-color: $bg-color-footer;
     padding: 25px 0;
     color: white;
+    a {
+        color: white;
+    }
     .container {
         div {
-            display: flex;
+            .footer-link {
+                display: flex;
+            }
         }
-        .logo-title {
-            font-family: 'Shrikhand', cursive, sans-serif;
-            font-weight: 300;
-            font-size: 15px;
+    }
+    .logo-footer-title {
+        font-family: 'Shrikhand', cursive, sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        padding-bottom: 15px;
+    }
+    .logo-footer {
+        width: 20px;
+        i {
+            font-size: 11px;
         }
+    }
+    .footer-link {
+        padding: 5px;
     }
 }
