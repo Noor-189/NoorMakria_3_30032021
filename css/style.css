@@ -16,6 +16,7 @@ a {
 
 h1 {
   font-family: "Shrikhand", cursive, sans-serif;
+  font-weight: 300;
 }
 
 h2, h3, h4, p {
@@ -41,6 +42,10 @@ button {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
+}
+
+.paddingX-button {
+  padding: 15px 30px;
 }
 
 .restaurant {
@@ -175,6 +180,35 @@ header .logo img {
 .location h3 {
   padding: 0 15px 25px 15px;
   font-size: 17px;
+}
+
+.banner-restaurant__visual {
+  position: relative;
+}
+.banner-restaurant__image {
+  height: 250px;
+}
+.banner-restaurant__image img {
+  height: 100%;
+  width: 100%;
+}
+.banner-restaurant__shape {
+  height: 30px;
+  background-color: #F6F6F6;
+  border-radius: 45px 45px 0 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 99;
+}
+.banner-restaurant__title {
+  background-color: #F6F6F6;
+}
+.banner-restaurant__title .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 30px;
 }
 
 footer {

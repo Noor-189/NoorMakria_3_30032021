@@ -1,0 +1,30 @@
+.banner-restaurant {
+    &__visual {
+        position: relative;
+    }
+    &__image {
+        height: 250px;
+        img {
+            height: 100%;
+            width: 100%;            
+        }
+    }    
+    &__shape {
+        height: 30px;
+        background-color: $bg-color-pages;
+        border-radius: 45px 45px 0 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: 99;        
+    }
+    &__title {
+        background-color: $bg-color-pages;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 30px;            
+        }
+    }        
+}
