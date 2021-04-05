@@ -10,6 +10,10 @@ button {
     cursor: pointer;
     background: linear-gradient(to top left, $primary-color, $secondary-color);
 }
-.paddingX-button {
-    padding: 15px 30px;
+.button-page1 {
+    text-align: center;
+    margin-top: 40px;
+    button {
+        padding: 15px 45px;
+    }
 }

@@ -1,6 +1,5 @@
 // header
 header {
-    @include flex-XY;
     height: 50px;
     .logo {
         width: 150px;
@@ -9,4 +8,16 @@ header {
         }
     }    
 }
-
+.header-index {
+    @include flex-XY;    
+}
+.header-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+    position: relative;
+    .arrow-link {
+        position: absolute;
+        left: 20px;
+    }
+}
