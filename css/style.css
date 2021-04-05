@@ -45,11 +45,11 @@ button {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
 }
 
-.button-page1 {
+.button-pages {
   text-align: center;
   margin-top: 40px;
 }
-.button-page1 button {
+.button-pages button {
   padding: 15px 45px;
 }
 
@@ -239,14 +239,18 @@ main[class=pages] .banner-restaurant__title .container i {
 }
 
 .menu-restaurant > h3 {
+  position: relative;
   margin-bottom: 20px;
   padding-top: 20px;
 }
 .menu-restaurant > h3::after {
   content: "";
-  width: 10px;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 40px;
   height: 3px;
-  color: #99E2D0;
+  background-color: #99E2D0;
 }
 .menu-restaurant .menu-card {
   display: flex;
