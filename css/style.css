@@ -312,6 +312,9 @@ main[class=pages] .banner-restaurant__title .container-pages i {
   align-self: center;
   font-size: 25px;
 }
+.restaurant .restaurant-card-group .restaurant-card__total .heart-logo i {
+  color: black;
+}
 .restaurant .restaurant-card-group .restaurant-card .green-sticker {
   position: absolute;
   top: 10px;
@@ -322,6 +325,66 @@ main[class=pages] .banner-restaurant__title .container-pages i {
   font-weight: 500;
 }
 
+.menu-restaurant:nth-child(1) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s ease-out forwards;
+}
+.menu-restaurant:nth-child(1) .menu-card:nth-child(1) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 0.6s ease-out forwards;
+}
+.menu-restaurant:nth-child(1) .menu-card:nth-child(2) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 0.4s ease-out forwards;
+}
+.menu-restaurant:nth-child(1) .menu-card:nth-child(3) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 0.2s ease-out forwards;
+}
+.menu-restaurant:nth-child(2) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 0.8s ease-out forwards;
+}
+.menu-restaurant:nth-child(2) .menu-card:nth-child(1) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 1.4s ease-out forwards;
+}
+.menu-restaurant:nth-child(2) .menu-card:nth-child(2) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 1.2s ease-out forwards;
+}
+.menu-restaurant:nth-child(2) .menu-card:nth-child(3) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 1s ease-out forwards;
+}
+.menu-restaurant:nth-child(3) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 1.6s ease-out forwards;
+}
+.menu-restaurant:nth-child(3) .menu-card:nth-child(1) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 2.2s ease-out forwards;
+}
+.menu-restaurant:nth-child(3) .menu-card:nth-child(2) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 2s ease-out forwards;
+}
+.menu-restaurant:nth-child(3) .menu-card:nth-child(3) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 1.8s ease-out forwards;
+}
 .menu-restaurant > h3 {
   position: relative;
   margin-bottom: 20px;
@@ -353,6 +416,12 @@ main[class=pages] .banner-restaurant__title .container-pages i {
   padding-right: 10px;
 }
 
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 footer {
   background-color: #353535;
   padding: 25px 0;
