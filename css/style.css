@@ -129,6 +129,9 @@ header .logo img {
   }
 }
 .operation .operation-card-group .operation-card__step {
+  position: absolute;
+  left: -10px;
+  top: 50%;
   color: white;
   font-size: 13px;
   padding-top: 3px;
@@ -137,9 +140,6 @@ header .logo img {
   height: 20px;
   width: 20px;
   text-align: center;
-  position: absolute;
-  left: -10px;
-  top: 50%;
   transform: translateY(-50%);
 }
 .operation .operation-card-group .operation-card__description {
@@ -149,6 +149,15 @@ header .logo img {
   padding: 25px 20px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.operation .operation-card-group .operation-card__description:hover {
+  background-color: #e4d5f6;
+}
+.operation .operation-card-group .operation-card__description:hover div i {
+  color: #9356DC;
+}
+.operation .operation-card-group .operation-card__description:hover h4 {
+  color: #9356DC;
 }
 .operation .operation-card-group .operation-card__description div {
   padding-left: 20px;
