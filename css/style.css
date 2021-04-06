@@ -29,6 +29,21 @@ h2 {
 
 h3 {
   font-weight: 400;
+  font-size: 15px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.menu-card h3 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+footer .logo-footer-title {
+  font-family: "Shrikhand", cursive, sans-serif;
+  font-weight: 100;
   font-size: 17px;
 }
 
@@ -51,55 +66,6 @@ button {
 }
 .button-pages button {
   padding: 15px 45px;
-}
-
-.restaurant {
-  background-color: #F6F6F6;
-  padding-bottom: 70px;
-}
-.restaurant h2 {
-  padding: 30px 0 20px 0;
-}
-.restaurant .restaurant-card-group .restaurant-card {
-  background-color: white;
-  margin-top: 15px;
-  border-radius: 15px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.restaurant .restaurant-card-group .restaurant-card__image-container {
-  width: 100%;
-  height: 180px;
-}
-.restaurant .restaurant-card-group .restaurant-card__image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  top: 10px;
-}
-.restaurant .restaurant-card-group .restaurant-card__text-description h3 {
-  padding-bottom: 5px;
-  font-weight: 800;
-}
-.restaurant .restaurant-card-group .restaurant-card__total {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 25px 15px 15px;
-}
-.restaurant .restaurant-card-group .restaurant-card__total .heart-logo {
-  align-self: center;
-  font-size: 25px;
-}
-.restaurant .restaurant-card-group .restaurant-card .green-sticker {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #99E2D0;
-  padding: 5px;
-  color: #278870;
-  font-weight: 500;
 }
 
 header {
@@ -129,21 +95,25 @@ header .logo img {
   left: 20px;
 }
 
+.operation {
+  padding-bottom: 70px;
+  text-align: center;
+}
 .operation h2 {
   margin-bottom: 30px;
 }
-.operation .operation-card {
+.operation .operation-card-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.operation .operation-card-group .operation-card {
   display: flex;
   position: relative;
   margin: 0 0 20px 10px;
+  width: 400px;
 }
-.operation .operation-card:nth-child(4) .operation-card__description {
-  background-color: #f2eafb;
-}
-.operation .operation-card:nth-child(4) .operation-card__description div {
-  color: #9356DC;
-}
-.operation .operation-card__step {
+.operation .operation-card-group .operation-card__step {
   color: white;
   font-size: 13px;
   padding-top: 3px;
@@ -157,7 +127,7 @@ header .logo img {
   top: 50%;
   transform: translateY(-50%);
 }
-.operation .operation-card__description {
+.operation .operation-card-group .operation-card__description {
   display: flex;
   background-color: #F6F6F6;
   width: 100%;
@@ -165,14 +135,18 @@ header .logo img {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.operation .operation-card__description div {
+.operation .operation-card-group .operation-card__description div {
   padding-left: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 35px;
 }
-.operation .operation-card__description h4 {
+.operation .operation-card-group .operation-card__description div i {
+  font-size: 19px;
+  color: #777777;
+}
+.operation .operation-card-group .operation-card__description h4 {
   padding-left: 20px;
 }
 
@@ -185,7 +159,7 @@ header .logo img {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 1px 3px 0px grey inset;
+  box-shadow: 0 4px 6px -5px grey inset;
   padding: 15px;
   background-color: #dddddd;
 }
@@ -238,6 +212,55 @@ main[class=pages] .banner-restaurant__title .container i {
   font-size: 21px;
 }
 
+.restaurant {
+  background-color: #F6F6F6;
+  padding-bottom: 70px;
+}
+.restaurant h2 {
+  padding: 30px 0 20px 0;
+}
+.restaurant .restaurant-card-group .restaurant-card {
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.restaurant .restaurant-card-group .restaurant-card__image-container {
+  width: 100%;
+  height: 180px;
+}
+.restaurant .restaurant-card-group .restaurant-card__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 10px;
+}
+.restaurant .restaurant-card-group .restaurant-card__text-description h3 {
+  padding-bottom: 5px;
+  font-weight: 800;
+}
+.restaurant .restaurant-card-group .restaurant-card__total {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px 15px 15px;
+}
+.restaurant .restaurant-card-group .restaurant-card__total .heart-logo {
+  align-self: center;
+  font-size: 25px;
+}
+.restaurant .restaurant-card-group .restaurant-card .green-sticker {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  padding: 5px;
+  color: #278870;
+  font-weight: 500;
+}
+
 .menu-restaurant > h3 {
   position: relative;
   margin-bottom: 20px;
@@ -261,7 +284,6 @@ main[class=pages] .banner-restaurant__title .container i {
   margin-bottom: 15px;
 }
 .menu-restaurant .menu-card h3 {
-  font-weight: 500;
   padding-bottom: 3px;
 }
 .menu-restaurant .menu-card .menu-card__price {
@@ -278,13 +300,14 @@ footer {
 footer a {
   color: white;
 }
+footer .container {
+  text-align: center;
+}
 footer .container div .footer-link {
   display: flex;
+  justify-content: center;
 }
 footer .logo-footer-title {
-  font-family: "Shrikhand", cursive, sans-serif;
-  font-weight: 300;
-  font-size: 17px;
   padding-bottom: 15px;
 }
 footer .logo-footer {

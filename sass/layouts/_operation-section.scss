@@ -1,53 +1,56 @@
-
-
 // operation section
 .operation {
+    padding-bottom: 70px;
+    text-align: center;
     h2 {
         margin-bottom: 30px;
     }
-    .operation-card {
+    .operation-card-group {
         display: flex;
-        position: relative;
-        margin: 0 0 20px 10px;
-        &:nth-child(4) {
-            .operation-card__description  {
-                background-color: lighten($primary-color, 35%);
+        flex-direction: column;
+        align-items: center;
+        .operation-card {
+            display: flex;
+            position: relative;
+            margin: 0 0 20px 10px;
+            width: 400px;
+            &__step {
+                color: white;
+                font-size: 13px;
+                padding-top: 3px;
+                background-color: $primary-color;
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                position: absolute;
+                left: -10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &__description {
+                display: flex;
+                background-color: $bg-color-pages;
+                width: 100%;
+                padding: 25px 20px;
+                border-radius: 20px;
+                @include shadow-card;
                 div {
-                    color: $primary-color;
+                    padding-left: 20px;
+                    @include flex-XY;
+                    width: 35px;
+                    i {
+                        font-size: 19px;
+                        color: darken($bg-color-pages, 50%);
+                    }
+                }
+                h4 {
+                    padding-left: 20px;
                 }
             }
-        }
-        &__step {
-            color: white;
-            font-size: 13px;
-            padding-top: 3px;
-            background-color: $primary-color;
-            border-radius: 50%;
-            height: 20px;
-            width: 20px;
-            text-align: center;
-            position: absolute;
-            left: -10px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        &__description {
-            display: flex;
-            background-color: $bg-color-pages;
-            width: 100%;
-            padding: 25px 20px;
-            border-radius: 20px;
-            @include shadow-card;
-            div {
-                padding-left: 20px;
-                @include flex-XY;
-                width: 35px;
-            }
-            h4 {
-                padding-left: 20px;
-            }
-        }
+        }        
     }
+
 }
 
 
