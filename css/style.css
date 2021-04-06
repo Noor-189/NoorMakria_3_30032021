@@ -9,6 +9,16 @@
   margin: 0 auto;
 }
 
+.container-pages {
+  width: 50%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .container-pages {
+    width: 90%;
+  }
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -113,6 +123,11 @@ header .logo img {
   margin: 0 0 20px 10px;
   width: 400px;
 }
+@media screen and (max-width: 768px) {
+  .operation .operation-card-group .operation-card {
+    width: 100%;
+  }
+}
 .operation .operation-card-group .operation-card__step {
   color: white;
   font-size: 13px;
@@ -182,7 +197,17 @@ main[class=pages] .banner-restaurant__visual {
   position: relative;
 }
 main[class=pages] .banner-restaurant__image {
-  height: 250px;
+  height: 600px;
+}
+@media screen and (max-width: 1200px) {
+  main[class=pages] .banner-restaurant__image {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main[class=pages] .banner-restaurant__image {
+    height: 260px;
+  }
 }
 main[class=pages] .banner-restaurant__image img {
   height: 100%;
@@ -202,22 +227,39 @@ main[class=pages] .banner-restaurant__shape {
 main[class=pages] .banner-restaurant__title {
   background-color: #F6F6F6;
 }
-main[class=pages] .banner-restaurant__title .container {
+main[class=pages] .banner-restaurant__title .container-pages {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
 }
-main[class=pages] .banner-restaurant__title .container i {
+main[class=pages] .banner-restaurant__title .container-pages i {
   font-size: 21px;
 }
 
 .restaurant {
   background-color: #F6F6F6;
   padding-bottom: 70px;
+  text-align: center;
 }
 .restaurant h2 {
   padding: 30px 0 20px 0;
+  margin: 0 auto;
+}
+.restaurant .restaurant-card-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+  .restaurant .restaurant-card-group {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 768px) {
+  .restaurant .restaurant-card-group {
+    display: block;
+  }
 }
 .restaurant .restaurant-card-group .restaurant-card {
   background-color: white;
@@ -225,7 +267,14 @@ main[class=pages] .banner-restaurant__title .container i {
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+  flex-basis: 23%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media screen and (max-width: 1200px) {
+  .restaurant .restaurant-card-group .restaurant-card {
+    flex-basis: 40%;
+    margin-bottom: 20px;
+  }
 }
 .restaurant .restaurant-card-group .restaurant-card__image-container {
   width: 100%;
@@ -237,6 +286,9 @@ main[class=pages] .banner-restaurant__title .container i {
   object-fit: cover;
   object-position: center;
   top: 10px;
+}
+.restaurant .restaurant-card-group .restaurant-card__text-description {
+  text-align: left;
 }
 .restaurant .restaurant-card-group .restaurant-card__text-description h3 {
   padding-bottom: 5px;
@@ -304,6 +356,13 @@ footer .container {
   text-align: center;
 }
 footer .container div .footer-link {
+  display: flex;
+  justify-content: center;
+}
+footer .container-pages {
+  text-align: center;
+}
+footer .container-pages div .footer-link {
   display: flex;
   justify-content: center;
 }

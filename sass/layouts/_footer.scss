@@ -11,6 +11,14 @@ footer {
             .footer-link {
                 @include flex-X;
             }
+        }        
+    }
+    .container-pages {
+        text-align: center;
+        div {
+            .footer-link {
+                @include flex-X;
+            }
         }
     }
     .logo-footer-title {

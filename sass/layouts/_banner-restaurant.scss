@@ -5,7 +5,13 @@ main[class="pages"] {
             position: relative;
         }
         &__image {
-            height: 250px;
+            height: 600px;
+            @include tablet-only {
+                height: 450px;
+            }            
+            @include mobile-only {
+                height: 260px;
+            }
             img {
                 height: 100%;
                 width: 100%;
@@ -24,7 +30,7 @@ main[class="pages"] {
         }
         &__title {
             background-color: $bg-color-pages;
-            .container {
+            .container-pages {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;

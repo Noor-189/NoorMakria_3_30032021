@@ -8,15 +8,15 @@
     width: 90%;
     margin: 0 auto;
 }
+.container-pages {
+    width: 50%;
+    margin: 0 auto;
+    @include mobile-only {
+        width: 90%;
+    }
+}
 
 a {
     text-decoration: none;
     color: black;
-}
-
-@media screen and (max-width: 1200px) {
-    
-}
-@media screen and (max-width: 768px) {
-    
 }
