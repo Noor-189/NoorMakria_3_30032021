@@ -1,0 +1,55 @@
+.index-spinner {
+    opacity: 0;
+    animation: index-spinner 0.4s 3s ease-out forwards;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: spinner 59s ease-out forwards;
+    background-color: $bg-color-pages;
+    width: 100%;
+    height: 100vh;
+    svg {
+        width: 500px;
+        height: 300px;
+        path {
+            fill: transparent;
+            stroke-width: 1;
+            stroke: $primary-color;
+            stroke-dasharray: 170;
+            stroke-dashoffset: 170;
+            animation: animate-logo 2s linear forwards;
+        }
+    }
+}
+
+@keyframes spinner {
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes index-spinner {
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes animate-logo {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 170;
+    }
+    80% {
+        stroke-dashoffset: 340;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 340;
+        fill: $primary-color;
+    }
+}
