@@ -95,15 +95,12 @@ button:hover {
 .heart-logo svg {
   fill: transparent;
   stroke: black;
-  stroke-width: 5px;
-  height: 30px;
-  width: 30px;
-  opacity: 0;
-  transition: opacity 1s ease-out;
+  stroke-width: 15px;
+  height: 20px;
+  width: 20px;
 }
 .heart-logo svg:hover {
   fill: #9356DC;
-  opacity: 1;
 }
 
 header {
@@ -270,9 +267,6 @@ main[class=pages] .banner-restaurant__title .container-pages {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-}
-main[class=pages] .banner-restaurant__title .container-pages i {
-  font-size: 21px;
 }
 
 .restaurant {
