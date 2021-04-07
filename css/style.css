@@ -96,8 +96,10 @@ button:hover {
   fill: transparent;
   stroke: black;
   stroke-width: 15px;
+  cursor: pointer;
   height: 20px;
   width: 20px;
+  transition: fill 0.7s;
 }
 .heart-logo svg:hover {
   fill: #9356DC;
@@ -265,7 +267,7 @@ main[class=pages] .banner-restaurant__title {
 main[class=pages] .banner-restaurant__title .container-pages {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  text-align: center;
   padding-bottom: 10px;
 }
 
@@ -472,27 +474,23 @@ footer div .footer-link .anim-gradient-text:hover {
   background-size: 400%;
   background-position: left 70% top 10%;
 }
-
-.container-pages {
+footer .container-pages {
   text-align: center;
 }
-.container-pages div .footer-link {
+footer .container-pages div .footer-link {
   display: flex;
   justify-content: center;
 }
-
-.logo-footer-title {
+footer .logo-footer-title {
   padding-bottom: 15px;
 }
-
-.logo-footer {
+footer .logo-footer {
   width: 20px;
 }
-.logo-footer i {
+footer .logo-footer i {
   font-size: 11px;
 }
-
-.footer-link {
+footer .footer-link {
   padding: 5px;
 }
 
