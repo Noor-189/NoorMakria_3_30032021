@@ -1,4 +1,5 @@
 .menu-restaurant {
+    // ANIMATION lignes 2 à 68
     &:nth-child(1) {
         opacity: 0;
         transform: translateY(30px);
@@ -86,28 +87,23 @@
         padding: 7px;
         border-radius: 15px;
         margin-bottom: 15px;
-        // &:nth-child(1) {
-        // opacity: 0;
-        // transform: translateY(30px);
-        // animation: apparition 0.4s 1s ease-out forwards;
-        // }
-        // &:nth-child(2) {
-        // opacity: 0;
-        // transform: translateY(30px);
-        // animation: apparition 0.4s 2s ease-out forwards;
-        // }
-        // &:nth-child(3) {
-        // opacity: 0;
-        // transform: translateY(30px);
-        // animation: apparition 0.4s 3s ease-out forwards;
-        // }
+        &__text-description {
+            h3, p {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 250px;
+                @include mobile-only {
+                }                
+            }
+        }
         h3 {
             padding-bottom: 3px;
         }
         .menu-card__price {
             align-self: flex-end;
             font-weight: 500;
-            padding-right: 10px;
+            padding: 0 10px 0 30px;
         }
     }
 }

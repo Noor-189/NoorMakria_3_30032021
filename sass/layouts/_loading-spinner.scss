@@ -14,7 +14,7 @@
     width: 100%;
     height: 100vh;
     svg {
-        width: 500px;
+        width: 350px;
         height: 300px;
         path {
             fill: transparent;
@@ -51,5 +51,6 @@
     100% {
         stroke-dashoffset: 340;
         fill: $primary-color;
+        stroke: $primary-color;
     }
 }

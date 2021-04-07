@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  width: 100%;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -101,7 +105,7 @@ button:hover {
   height: 100vh;
 }
 .loading-spinner svg {
-  width: 500px;
+  width: 350px;
   height: 300px;
 }
 .loading-spinner svg path {
@@ -137,6 +141,7 @@ button:hover {
   100% {
     stroke-dashoffset: 340;
     fill: #9356DC;
+    stroke: #9356DC;
   }
 }
 header {
@@ -469,13 +474,19 @@ main[class=pages] .banner-restaurant__title .container-pages i {
   border-radius: 15px;
   margin-bottom: 15px;
 }
+.menu-restaurant .menu-card__text-description h3, .menu-restaurant .menu-card__text-description p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 250px;
+}
 .menu-restaurant .menu-card h3 {
   padding-bottom: 3px;
 }
 .menu-restaurant .menu-card .menu-card__price {
   align-self: flex-end;
   font-weight: 500;
-  padding-right: 10px;
+  padding: 0 10px 0 30px;
 }
 
 @keyframes apparition {
@@ -488,6 +499,8 @@ footer {
   background-color: #353535;
   padding: 25px 0;
   color: white;
+  position: absolute;
+  width: 100%;
 }
 footer a {
   color: white;

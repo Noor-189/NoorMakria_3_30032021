@@ -2,6 +2,8 @@ footer {
     background-color: $bg-color-footer;
     padding: 25px 0;
     color: white;
+    position: absolute; // pour fixer le footer en bas de la page (pb div additionnelle)
+    width: 100%;
     a {
         color: white;
     }
