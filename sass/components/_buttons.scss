@@ -8,7 +8,13 @@ button {
     font-size: 15px;
     @include shadow-card;
     cursor: pointer;
-    background: linear-gradient(to top left, $primary-color, $secondary-color);
+    background: $primary-color;
+    box-shadow: 0px 15px 45px 11px inset $secondary-color;
+    transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    &:hover {
+    background: $secondary-color;
+    box-shadow: 0px 15px 45px 0px inset $primary-color;    
+    }
 }
 .button-pages {
     text-align: center;
