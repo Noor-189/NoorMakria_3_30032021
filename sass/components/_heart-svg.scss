@@ -1,0 +1,17 @@
+.heart-logo {
+    align-self: center;
+    font-size: 25px;
+    svg {
+        fill: transparent;
+        stroke: black;
+        stroke-width: 5px;
+        height: 30px;
+        width: 30px;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        &:hover {
+            fill: $primary-color;
+            opacity: 1;
+        }
+    }
+}

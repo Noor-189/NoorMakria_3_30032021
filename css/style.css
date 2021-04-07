@@ -88,62 +88,24 @@ button:hover {
   padding: 15px 45px;
 }
 
-.index-spinner {
-  opacity: 0;
-  animation: index-spinner 0.4s 3s ease-out forwards;
+.heart-logo {
+  align-self: center;
+  font-size: 25px;
 }
-
-.loading-spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  animation: spinner 59s ease-out forwards;
-  background-color: #F6F6F6;
-  width: 100%;
-  height: 100vh;
-}
-.loading-spinner svg {
-  width: 350px;
-  height: 300px;
-}
-.loading-spinner svg path {
+.heart-logo svg {
   fill: transparent;
-  stroke-width: 1;
-  stroke: #9356DC;
-  stroke-dasharray: 170;
-  stroke-dashoffset: 170;
-  animation: animate-logo 2s linear forwards;
+  stroke: black;
+  stroke-width: 5px;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.heart-logo svg:hover {
+  fill: #9356DC;
+  opacity: 1;
 }
 
-@keyframes spinner {
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes index-spinner {
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes animate-logo {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  40% {
-    stroke-dashoffset: 170;
-  }
-  80% {
-    stroke-dashoffset: 340;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 340;
-    fill: #9356DC;
-    stroke: #9356DC;
-  }
-}
 header {
   height: 50px;
 }
@@ -374,13 +336,6 @@ main[class=pages] .banner-restaurant__title .container-pages i {
   display: flex;
   justify-content: space-between;
   padding: 15px 25px 15px 15px;
-}
-.restaurant .restaurant-card-group .restaurant-card__total .heart-logo {
-  align-self: center;
-  font-size: 25px;
-}
-.restaurant .restaurant-card-group .restaurant-card__total .heart-logo i {
-  color: black;
 }
 .restaurant .restaurant-card-group .restaurant-card .green-sticker {
   position: absolute;
