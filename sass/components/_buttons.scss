@@ -8,12 +8,12 @@ button {
     font-size: 15px;
     @include shadow-card;
     cursor: pointer;
-    background: $primary-color;
-    box-shadow: 0px 15px 45px 11px inset $secondary-color;
-    transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    background-image: linear-gradient(320deg, darken($primary-color, 20%), $primary-color, darken($secondary-color, 10%), $secondary-color);
+    background-size: 200%;
+    background-position: left 60% top 10%;
+    transition: background-position 0.5s;
     &:hover {
-    background: $secondary-color;
-    box-shadow: 0px 15px 45px 0px inset $primary-color;    
+        background-position: right 5% bottom 10%;    
     }
 }
 .button-pages {
