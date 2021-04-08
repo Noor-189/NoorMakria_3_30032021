@@ -116,6 +116,65 @@ button:hover {
     opacity: 1;
   }
 }
+.menu-card {
+  display: flex;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.menu-card--flex {
+  flex: 6;
+  display: flex;
+}
+.menu-card--flex .menu-card__text-description {
+  background-color: burlywood;
+  padding: 10px;
+  flex: 4;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu-card--flex .menu-card__price {
+  align-self: flex-end;
+  font-weight: 500;
+  padding: 0 10px 0 30px;
+  background-color: aquamarine;
+  flex: 1;
+  padding: 10px;
+}
+.menu-card__check-anim {
+  flex: 0;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  z-index: -99999;
+  animation: check-animation 1s;
+}
+.menu-card__check-anim:hover {
+  flex: 1;
+}
+.menu-card__check-anim p {
+  border-radius: 50%;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-card__check-anim p i {
+  color: #99E2D0;
+}
+
+@keyframes check-animation {
+  100% {
+    z-index: 99999;
+  }
+}
 .loading-spinner {
   background-color: #F6F6F6;
   width: 100%;
@@ -410,67 +469,67 @@ main[class=pages] .banner-restaurant__title .container-pages {
 .menu-restaurant:nth-child(1) {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s ease-out forwards;
+  animation: menu-animation 0.6s ease-out forwards;
 }
 .menu-restaurant:nth-child(1) .menu-card.menu-card1 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 0.2s ease-out forwards;
+  animation: menu-animation 0.6s 0.2s ease-out forwards;
 }
 .menu-restaurant:nth-child(1) .menu-card.menu-card2 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 0.4s ease-out forwards;
+  animation: menu-animation 0.6s 0.4s ease-out forwards;
 }
 .menu-restaurant:nth-child(1) .menu-card.menu-card3 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 0.6s ease-out forwards;
+  animation: menu-animation 0.6s 0.6s ease-out forwards;
 }
 .menu-restaurant:nth-child(1) .menu-card.menu-card4 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 0.7s ease-out forwards;
+  animation: menu-animation 0.6s 0.7s ease-out forwards;
 }
 .menu-restaurant:nth-child(2) {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 0.8s ease-out forwards;
+  animation: menu-animation 0.6s 0.8s ease-out forwards;
 }
 .menu-restaurant:nth-child(2) .menu-card.menu-card1 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 1s ease-out forwards;
+  animation: menu-animation 0.6s 1s ease-out forwards;
 }
 .menu-restaurant:nth-child(2) .menu-card.menu-card2 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 1.2s ease-out forwards;
+  animation: menu-animation 0.6s 1.2s ease-out forwards;
 }
 .menu-restaurant:nth-child(2) .menu-card.menu-card3 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 1.4s ease-out forwards;
+  animation: menu-animation 0.6s 1.4s ease-out forwards;
 }
 .menu-restaurant:nth-child(3) {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 1.6s ease-out forwards;
+  animation: menu-animation 0.6s 1.6s ease-out forwards;
 }
 .menu-restaurant:nth-child(3) .menu-card.menu-card1 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 1.8s ease-out forwards;
+  animation: menu-animation 0.6s 1.8s ease-out forwards;
 }
 .menu-restaurant:nth-child(3) .menu-card.menu-card2 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 2s ease-out forwards;
+  animation: menu-animation 0.6s 2s ease-out forwards;
 }
 .menu-restaurant:nth-child(3) .menu-card.menu-card3 {
   opacity: 0;
   transform: translateY(10px);
-  animation: apparition 0.6s 2.2s ease-out forwards;
+  animation: menu-animation 0.6s 2.2s ease-out forwards;
 }
 .menu-restaurant > h3 {
   position: relative;
@@ -486,71 +545,8 @@ main[class=pages] .banner-restaurant__title .container-pages {
   height: 3px;
   background-color: #99E2D0;
 }
-.menu-restaurant .menu-card {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  overflow: hidden;
-}
-.menu-restaurant .menu-card:hover .menu-card__check-anim {
-  transform: translateX(50px);
-  animation: apparition 0.6s ease-out forwards;
-}
-.menu-restaurant .menu-card:hover i {
-  transform: rotate(360deg);
-  animation: apparition 0.6s ease-out forwards;
-}
-.menu-restaurant .menu-card .menu-card--flex {
-  background-color: yellow;
-  display: flex;
-  flex: 65% 1 0;
-  justify-content: space-between;
-  padding: 7px;
-}
-.menu-restaurant .menu-card__text-description {
-  background-color: brown;
-  flex-grow: 1;
-}
-.menu-restaurant .menu-card__text-description h3, .menu-restaurant .menu-card__text-description p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.menu-restaurant .menu-card h3 {
-  padding-bottom: 3px;
-}
-.menu-restaurant .menu-card__price {
-  align-self: flex-end;
-  font-weight: 500;
-  padding: 0 10px 0 30px;
-  background-color: aquamarine;
-  flex-grow: 0;
-}
-.menu-restaurant .menu-card__check-anim {
-  opacity: 0;
-  background-color: #99E2D0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-basis: 15%;
-}
-.menu-restaurant .menu-card__check-anim p {
-  border-radius: 50%;
-  background-color: white;
-  width: 25px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu-restaurant .menu-card__check-anim p i {
-  color: #99E2D0;
-}
 
-@keyframes apparition {
+@keyframes menu-animation {
   100% {
     opacity: 1;
     transform: none;

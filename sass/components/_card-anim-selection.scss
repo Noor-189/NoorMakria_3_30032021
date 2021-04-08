@@ -1,0 +1,137 @@
+.menu-card {
+    display: flex;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    &--flex {
+        flex: 6;
+        display: flex;
+        .menu-card__text-description {
+            background-color: burlywood;
+            padding: 10px;
+            flex: 4;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .menu-card__price {
+            align-self: flex-end;
+            font-weight: 500;
+            padding: 0 10px 0 30px;
+            background-color: aquamarine;
+            flex: 1;
+            padding: 10px;
+        }
+    }
+    &__check-anim {
+        flex: 0;
+        background-color: $tertiary-color;
+        @include flex-XY;
+        transition: 1s;
+        z-index: -99999;
+        animation: check-animation 1s;
+        &:hover {
+            flex: 1;
+        }
+        p { // le rond blanc autour du check vert
+            border-radius: 50%;
+            background-color: white;
+            width: 25px;
+            height: 25px;
+            @include flex-XY;
+        i { // le check vert
+            color: $tertiary-color;
+        }            
+    }
+}
+}
+
+
+@keyframes check-animation {
+    100% {
+        z-index: 99999;
+    }
+}
+
+
+
+
+
+
+
+
+
+// .menu-card {
+//     display: flex;
+//     background-color: white;
+//     cursor: pointer;
+//     border-radius: 15px;
+//     margin-bottom: 15px;
+//     overflow: hidden;
+//     &:hover .menu-card__check-anim {
+//         animation: check-translation 0.6s ease-out forwards;            
+//     }
+//     &:hover i {
+//         transform: rotate(360deg);
+//         animation: check-rotation 0.6s ease-out forwards;            
+//     }
+
+
+//     .menu-card--flex {
+//         background-color: yellow;
+//         display: flex;
+//         justify-content: space-between;
+//         padding: 7px;
+//     }
+//     &__text-description {
+//         background-color: brown;
+//         h3, p {
+//             white-space: nowrap;
+//             text-overflow: ellipsis;
+//             overflow: hidden;
+//             @include mobile-only {
+//             }                
+//         }
+//     }
+//     h3 {
+//         padding-bottom: 3px;
+//     }
+//     &__price {
+//         align-self: flex-end;
+//         font-weight: 500;
+//         padding: 0 10px 0 30px;
+//         background-color: aquamarine;
+//         flex-grow: 0;
+//     }
+
+//     &__check-anim {
+//         opacity: 0;
+//         flex: 0;
+//         background-color: $tertiary-color;
+//         @include flex-XY;
+//         p { // le rond blanc autour du check vert
+//             border-radius: 50%;
+//             background-color: white;
+//             width: 25px;
+//             height: 25px;
+//             @include flex-XY;
+//         i { // le check vert
+//             color: $tertiary-color;
+//         }            
+//         }
+//     }
+// }
+
+// @keyframes check-rotation {
+//     100% {
+//         opacity: 1;
+//         transform: none;
+//     }
+// }
+// @keyframes check-translation {
+//     100% {
+//         flex: 4;
+//     }
+// }
