@@ -5,22 +5,22 @@
         transform: translateY(10px);
         animation: apparition 0.6s ease-out forwards;
         .menu-card {
-            &:nth-child(2) {
+            &.menu-card1 {
                 opacity: 0;
                 transform: translateY(10px);
                 animation: apparition 0.6s 0.2s ease-out forwards;            
             }
-            &:nth-child(3) {
+            &.menu-card2 {
                 opacity: 0;
                 transform: translateY(10px);
                 animation: apparition 0.6s 0.4s ease-out forwards;            
             }
-            &:nth-child(4) {
+            &.menu-card3 {
                 opacity: 0;
                 transform: translateY(10px);
                 animation: apparition 0.6s 0.6s ease-out forwards;            
             }
-            &:nth-child(5) {
+            &.menu-card4 {
                 opacity: 0;
                 transform: translateY(10px);
                 animation: apparition 0.6s 0.7s ease-out forwards;            
@@ -32,17 +32,17 @@
         transform: translateY(10px);
         animation: apparition 0.6s 0.8s ease-out forwards;
             .menu-card {
-                &:nth-child(2) {
+                &.menu-card1 {
                     opacity: 0;
                     transform: translateY(10px);
                     animation: apparition 0.6s 1s ease-out forwards;            
                 }
-                &:nth-child(3) {
+                &.menu-card2 {
                     opacity: 0;
                     transform: translateY(10px);
                     animation: apparition 0.6s 1.2s ease-out forwards;            
                 }
-                &:nth-child(4) {
+                &.menu-card3 {
                     opacity: 0;
                     transform: translateY(10px);
                     animation: apparition 0.6s 1.4s ease-out forwards;            
@@ -54,17 +54,17 @@
         transform: translateY(10px);
         animation: apparition 0.6s 1.6s ease-out forwards;
         .menu-card {
-            &:nth-child(2) {
+            &.menu-card1 {
                 opacity: 0;
                 transform: translateY(10px);
                 animation: apparition 0.6s 1.8s ease-out forwards;            
             }
-            &:nth-child(3) {
+            &.menu-card2 {
                 opacity: 0;
                 transform: translateY(10px);
                 animation: apparition 0.6s 2s ease-out forwards;            
             }
-            &:nth-child(4) {
+            &.menu-card3 {
                 opacity: 0;
                 transform: translateY(10px);
                 animation: apparition 0.6s 2.2s ease-out forwards;            
@@ -90,16 +90,31 @@
         justify-content: space-between;
         background-color: white;
         cursor: pointer;
-        padding: 7px;
         border-radius: 15px;
         margin-bottom: 15px;
+        overflow: hidden;
+        &:hover .menu-card__check-anim {
+            transform: translateX(50px);
+            animation: apparition 0.6s ease-out forwards;            
+        }
+        &:hover i {
+            transform: rotate(360deg);
+            animation: apparition 0.6s ease-out forwards;            
+        }
+        .menu-card--flex {
+            background-color: yellow;
+            display: flex;
+            flex: 65% 1 0;
+            justify-content: space-between;
+            padding: 7px;
+        }
         &__text-description {
             background-color: brown;
+            flex-grow: 1;
             h3, p {
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                width: 250px;
                 @include mobile-only {
                 }                
             }
@@ -107,11 +122,29 @@
         h3 {
             padding-bottom: 3px;
         }
-        .menu-card__price {
+        &__price {
             align-self: flex-end;
             font-weight: 500;
             padding: 0 10px 0 30px;
             background-color: aquamarine;
+            flex-grow: 0;
+        }
+        &__check-anim {
+            opacity: 0;
+            background-color: $tertiary-color;
+            @include flex-XY;
+            flex-basis: 15%;
+
+            p { // le rond blanc autour du check vert
+                border-radius: 50%;
+                background-color: white;
+                width: 25px;
+                height: 25px;
+                @include flex-XY;
+            i { // le check vert
+                color: $tertiary-color;
+            }            
+            }
         }
     }
 }
