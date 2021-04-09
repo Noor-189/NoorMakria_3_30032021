@@ -6,11 +6,13 @@
     border-radius: 15px;
     margin-bottom: 15px;
     overflow: hidden;
-    .menu-card__text-description {
+    position: relative;
+    &__text-description {
         // background-color: violet;
         padding: 10px;
         @include mobile-only {
-            width: 227px;
+            width: 277px;
+            transition: width 500ms ease-out;
         }
         p, h3 {
             // background-color: cyan;
@@ -19,51 +21,66 @@
             overflow: hidden;
         }
     }
-    .bloc-animation { // animation totale
-        display: flex;
-        justify-content: end;
-        transform: translateX(55px);
-        transition: transform 500ms ease-out;
+    .bloc-animation__price {
         // background-color: crimson;
-        &__price {
-            // background-color: wheat;
-            align-self: flex-end;
-            font-weight: 500;
-            padding: 10px;
+        position: absolute;
+        right: 30px;
+        align-self: flex-end;
+        font-weight: 500;
+        padding: 10px;
+        margin-right: 10px;
+        transform: translateX(30px);
+        transition: transform 500ms ease-out;
+        @include mobile-only {
             margin-right: 10px;
-            @include mobile-only {
-                margin-right: 10px;
-            }
-        }
-        &__check { // le check vert
-            background-color: $tertiary-color;
-            @include flex-XY;
-            width: 55px;
-            p { // le rond blanc autour du check vert
-                border-radius: 50%;
-                background-color: white;
-                width: 20px;
-                height: 20px;
-                @include flex-XY;
-                i { // le check vert
-                    color: $tertiary-color;
-                    font-size: 10px;
-                }            
-            }
         }
     }
+    .bloc-animation__check { // le check vert
+        background-color: $tertiary-color;
+        @include flex-XY;
+        width: 55px;
+        transform: translateX(55px);
+        transition: transform 500ms ease-out;
+        @include mobile-only {
+            transform: translateX(83px);
+        }
+        p { // le rond blanc autour du check vert
+            border-radius: 50%;
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            @include flex-XY;
+            i { // le check vert
+                color: $tertiary-color;
+                font-size: 10px;
+            }            
+        }
+    }
+
 }
+
 // code qui déclenche les animations check au hover de la carte (état final) //
 .menu-card { //.menu-card__check-anim//
-    &:hover .bloc-animation {
+    &:hover .bloc-animation__price {
+        transform: translateX(-20px);
+        @include mobile-only {
+            transform: translateX(-20px);
+        }
+    }
+    &:hover .bloc-animation__check {
         transform: translateX(0px);
         @include mobile-only {
             transform: translateX(0px);
         }
-    }    
+    }      
     &:hover i {
         transform: rotate(360deg);
         animation: check-rotation 500ms ease-out forwards;
+    }
+    &:hover .menu-card__text-description{
+        @include mobile-only {
+            animation: reduce-description 500ms ease-out forwards;
+        }
     }
 }
 
@@ -73,3 +90,9 @@
         transform: none;
     }
 }
+@keyframes reduce-description {
+    100% {
+        width: 228px;
+    }
+}
+//-----------------------------------------------------------------------------//

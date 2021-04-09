@@ -124,31 +124,31 @@ button:hover {
   border-radius: 15px;
   margin-bottom: 15px;
   overflow: hidden;
+  position: relative;
 }
-.menu-card .menu-card__text-description {
+.menu-card__text-description {
   padding: 10px;
 }
 @media screen and (max-width: 768px) {
-  .menu-card .menu-card__text-description {
-    width: 227px;
+  .menu-card__text-description {
+    width: 277px;
+    transition: width 500ms ease-out;
   }
 }
-.menu-card .menu-card__text-description p, .menu-card .menu-card__text-description h3 {
+.menu-card__text-description p, .menu-card__text-description h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu-card .bloc-animation {
-  display: flex;
-  justify-content: end;
-  transform: translateX(55px);
-  transition: transform 500ms ease-out;
-}
 .menu-card .bloc-animation__price {
+  position: absolute;
+  right: 30px;
   align-self: flex-end;
   font-weight: 500;
   padding: 10px;
   margin-right: 10px;
+  transform: translateX(30px);
+  transition: transform 500ms ease-out;
 }
 @media screen and (max-width: 768px) {
   .menu-card .bloc-animation__price {
@@ -161,6 +161,13 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 55px;
+  transform: translateX(55px);
+  transition: transform 500ms ease-out;
+}
+@media screen and (max-width: 768px) {
+  .menu-card .bloc-animation__check {
+    transform: translateX(83px);
+  }
 }
 .menu-card .bloc-animation__check p {
   border-radius: 50%;
@@ -176,11 +183,19 @@ button:hover {
   font-size: 10px;
 }
 
-.menu-card:hover .bloc-animation {
+.menu-card:hover .bloc-animation__price {
+  transform: translateX(-20px);
+}
+@media screen and (max-width: 768px) {
+  .menu-card:hover .bloc-animation__price {
+    transform: translateX(-20px);
+  }
+}
+.menu-card:hover .bloc-animation__check {
   transform: translateX(0px);
 }
 @media screen and (max-width: 768px) {
-  .menu-card:hover .bloc-animation {
+  .menu-card:hover .bloc-animation__check {
     transform: translateX(0px);
   }
 }
@@ -188,11 +203,21 @@ button:hover {
   transform: rotate(360deg);
   animation: check-rotation 500ms ease-out forwards;
 }
+@media screen and (max-width: 768px) {
+  .menu-card:hover .menu-card__text-description {
+    animation: reduce-description 500ms ease-out forwards;
+  }
+}
 
 @keyframes check-rotation {
   100% {
     opacity: 1;
     transform: none;
+  }
+}
+@keyframes reduce-description {
+  100% {
+    width: 228px;
   }
 }
 .loading-spinner {
