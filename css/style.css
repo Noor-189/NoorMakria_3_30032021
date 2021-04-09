@@ -118,61 +118,81 @@ button:hover {
 }
 .menu-card {
   display: flex;
+  justify-content: space-between;
   background-color: white;
   cursor: pointer;
   border-radius: 15px;
   margin-bottom: 15px;
   overflow: hidden;
 }
-.menu-card--flex {
-  flex: 6;
-  display: flex;
-}
-.menu-card--flex .menu-card__text-description {
-  background-color: burlywood;
+.menu-card .menu-card__text-description {
   padding: 10px;
-  flex: 4;
+}
+@media screen and (max-width: 768px) {
+  .menu-card .menu-card__text-description {
+    width: 227px;
+  }
+}
+.menu-card .menu-card__text-description p, .menu-card .menu-card__text-description h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu-card--flex .menu-card__price {
+.menu-card .bloc-animation {
+  display: flex;
+  justify-content: end;
+  transform: translateX(55px);
+  transition: transform 500ms ease-out;
+}
+.menu-card .bloc-animation__price {
   align-self: flex-end;
   font-weight: 500;
-  padding: 0 10px 0 30px;
-  background-color: aquamarine;
-  flex: 1;
   padding: 10px;
+  margin-right: 10px;
 }
-.menu-card__check-anim {
-  flex: 0;
+@media screen and (max-width: 768px) {
+  .menu-card .bloc-animation__price {
+    margin-right: 10px;
+  }
+}
+.menu-card .bloc-animation__check {
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 1s;
-  z-index: -99999;
-  animation: check-animation 1s;
+  width: 55px;
 }
-.menu-card__check-anim:hover {
-  flex: 1;
-}
-.menu-card__check-anim p {
+.menu-card .bloc-animation__check p {
   border-radius: 50%;
   background-color: white;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menu-card__check-anim p i {
+.menu-card .bloc-animation__check p i {
   color: #99E2D0;
+  font-size: 10px;
 }
 
-@keyframes check-animation {
+.menu-card:hover .bloc-animation {
+  transform: translateX(0px);
+}
+@media screen and (max-width: 768px) {
+  .menu-card:hover .bloc-animation {
+    transform: translateX(0px);
+  }
+}
+.menu-card:hover i {
+  transform: rotate(360deg);
+  animation: check-rotation 500ms ease-out forwards;
+}
+
+@keyframes check-rotation {
   100% {
-    z-index: 99999;
+    opacity: 1;
+    transform: none;
   }
 }
 .loading-spinner {

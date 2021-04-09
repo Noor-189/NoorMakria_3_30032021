@@ -1,137 +1,75 @@
 .menu-card {
     display: flex;
+    justify-content: space-between;
     background-color: white;
     cursor: pointer;
     border-radius: 15px;
     margin-bottom: 15px;
     overflow: hidden;
-    &--flex {
-        flex: 6;
-        display: flex;
-        .menu-card__text-description {
-            background-color: burlywood;
-            padding: 10px;
-            flex: 4;
+    .menu-card__text-description {
+        // background-color: violet;
+        padding: 10px;
+        @include mobile-only {
+            width: 227px;
+        }
+        p, h3 {
+            // background-color: cyan;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
         }
-        .menu-card__price {
+    }
+    .bloc-animation { // animation totale
+        display: flex;
+        justify-content: end;
+        transform: translateX(55px);
+        transition: transform 500ms ease-out;
+        // background-color: crimson;
+        &__price {
+            // background-color: wheat;
             align-self: flex-end;
             font-weight: 500;
-            padding: 0 10px 0 30px;
-            background-color: aquamarine;
-            flex: 1;
             padding: 10px;
+            margin-right: 10px;
+            @include mobile-only {
+                margin-right: 10px;
+            }
         }
-    }
-    &__check-anim {
-        flex: 0;
-        background-color: $tertiary-color;
-        @include flex-XY;
-        transition: 1s;
-        z-index: -99999;
-        animation: check-animation 1s;
-        &:hover {
-            flex: 1;
-        }
-        p { // le rond blanc autour du check vert
-            border-radius: 50%;
-            background-color: white;
-            width: 25px;
-            height: 25px;
+        &__check { // le check vert
+            background-color: $tertiary-color;
             @include flex-XY;
-        i { // le check vert
-            color: $tertiary-color;
-        }            
+            width: 55px;
+            p { // le rond blanc autour du check vert
+                border-radius: 50%;
+                background-color: white;
+                width: 20px;
+                height: 20px;
+                @include flex-XY;
+                i { // le check vert
+                    color: $tertiary-color;
+                    font-size: 10px;
+                }            
+            }
+        }
     }
 }
+// code qui déclenche les animations check au hover de la carte (état final) //
+.menu-card { //.menu-card__check-anim//
+    &:hover .bloc-animation {
+        transform: translateX(0px);
+        @include mobile-only {
+            transform: translateX(0px);
+        }
+    }    
+    &:hover i {
+        transform: rotate(360deg);
+        animation: check-rotation 500ms ease-out forwards;
+    }
 }
 
-
-@keyframes check-animation {
+@keyframes check-rotation {
     100% {
-        z-index: 99999;
+        opacity: 1;
+        transform: none;
     }
 }
-
-
-
-
-
-
-
-
-
-// .menu-card {
-//     display: flex;
-//     background-color: white;
-//     cursor: pointer;
-//     border-radius: 15px;
-//     margin-bottom: 15px;
-//     overflow: hidden;
-//     &:hover .menu-card__check-anim {
-//         animation: check-translation 0.6s ease-out forwards;            
-//     }
-//     &:hover i {
-//         transform: rotate(360deg);
-//         animation: check-rotation 0.6s ease-out forwards;            
-//     }
-
-
-//     .menu-card--flex {
-//         background-color: yellow;
-//         display: flex;
-//         justify-content: space-between;
-//         padding: 7px;
-//     }
-//     &__text-description {
-//         background-color: brown;
-//         h3, p {
-//             white-space: nowrap;
-//             text-overflow: ellipsis;
-//             overflow: hidden;
-//             @include mobile-only {
-//             }                
-//         }
-//     }
-//     h3 {
-//         padding-bottom: 3px;
-//     }
-//     &__price {
-//         align-self: flex-end;
-//         font-weight: 500;
-//         padding: 0 10px 0 30px;
-//         background-color: aquamarine;
-//         flex-grow: 0;
-//     }
-
-//     &__check-anim {
-//         opacity: 0;
-//         flex: 0;
-//         background-color: $tertiary-color;
-//         @include flex-XY;
-//         p { // le rond blanc autour du check vert
-//             border-radius: 50%;
-//             background-color: white;
-//             width: 25px;
-//             height: 25px;
-//             @include flex-XY;
-//         i { // le check vert
-//             color: $tertiary-color;
-//         }            
-//         }
-//     }
-// }
-
-// @keyframes check-rotation {
-//     100% {
-//         opacity: 1;
-//         transform: none;
-//     }
-// }
-// @keyframes check-translation {
-//     100% {
-//         flex: 4;
-//     }
-// }
