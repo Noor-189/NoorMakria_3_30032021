@@ -3,51 +3,58 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 99999;
-    opacity: 1;
-    animation: spinner 9s ease-out forwards, opacity-spinner 0.1s 3s ease-out forwards;
-    svg {
+    z-index: 99999; //au début du chargement de la page le spinner est au dessus de la page index
+    animation: spinner-final-index 9s ease-out forwards, spinner-disappear 0.1s 3s ease-out forwards;
+    svg { //dispostion de l'icone spinner au milieu de la page
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 350px;
         height: 300px;
-        path {
+        path { 
             fill: transparent;
             stroke-width: 1;
             stroke: $primary-color;
-            stroke-dasharray: 170;
-            stroke-dashoffset: 170;
-            animation: animate-logo 2s linear forwards;
+            stroke-dasharray: 171; //création de pointillé plein
+            // on augmente la valeur jusqu'a trouver celle qui fera en sorte qu'un seul pointillé soit de la taille totale du contour de l'icone (lettre par lettre)
+            stroke-dashoffset: 171; //décallage du pointillé de 100% car même taille, on va avoir un pointillé blanc
+            animation: animate-logo 2s linear forwards; //animation du logo, dash puis remplissage
         }
     }
 }
 
-@keyframes spinner {
+@keyframes spinner-final-index {
     100% {
-        z-index: -99999;
+        // z-index: -99999; // au bout de 9s le spinner passe derrière l'index
     }
 }
-@keyframes opacity-spinner {
+@keyframes spinner-disappear {
     100% {
-        opacity: 0;
+        // opacity: 0; //au bout de 3s le spinner disparait, sinon on le voit en arrière plan a cause de l'index
     }
 }
-@keyframes animate-logo {
-    0% {
-        stroke-dashoffset: 0;
-    }
-    40% {
-        stroke-dashoffset: 170;
-    }
-    80% {
-        stroke-dashoffset: 340;
-        fill: transparent;
-    }
-    100% {
-        stroke-dashoffset: 340;
-        fill: $primary-color;
-        stroke: $primary-color;
-    }
+@keyframes animate-logo { //l'animation du logo en lui même se fait en 2s
+    // 0% { // pas de décallage donc trait plein de base 
+    //     stroke-dashoffset: 0;
+    // }
+    // 40% { //
+    //     stroke-dashoffset: 171; // on fait entrer le pointillé vide et prend donc progressivement la place du pointillé plein
+    //                             // à 40% le pointillé vide remplace completement le pointillé plein
+    //                             // on efface le logo progressivement                     
+    // }
+    // 80% {
+    //     stroke-dashoffset: 342; // on fait entre le pointillé plein, on reecrit le logo progressivement
+    //     fill: transparent;
+    // }
+    // 100% {
+    //     stroke-dashoffset: 342;
+    //     fill: $primary-color;
+    //     stroke: $primary-color;
+    // }
 }
+
+// Le logo s'affiche
+// Le logo s'efface
+// Le logo se réécrit
+// Le logo prend un fond de couleur

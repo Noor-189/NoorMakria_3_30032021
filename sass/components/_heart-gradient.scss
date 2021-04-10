@@ -5,14 +5,12 @@
     .fas.fa-heart { // coeur plein
         position: absolute;
         left: 0.1px;
-        top: 0.7px;
+        top: 0.8px;
         cursor: pointer;
         background-image: linear-gradient($primary-color, $secondary-color);
         -webkit-background-clip: text;
         color: transparent;
-        opacity: 0;
         &:hover {
-            opacity: 1;
             animation: full-opacity 0.5s ease-out forwards;
         }
     }
