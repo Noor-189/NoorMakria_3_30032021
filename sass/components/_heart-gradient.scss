@@ -1,6 +1,6 @@
 .heart-logo {
     align-self: center;
-    font-size: 25px;
+    font-size: 26px;
     position: relative;
     .fas.fa-heart { // coeur plein
         position: absolute;
@@ -10,16 +10,15 @@
         background-image: linear-gradient($primary-color, $secondary-color);
         -webkit-background-clip: text;
         color: transparent;
+        opacity: 0;
         &:hover {
-            animation: full-opacity 0.5s ease-out forwards;
+            animation: plainHeart-appear 0.3s ease-out forwards;
         }
     }
 }
-@keyframes full-opacity {
-    0% {
-        opacity: 0;
-    }
+@keyframes plainHeart-appear {
     100% {
         opacity: 1;
+        transform: scale(1.1);
     }
 }
