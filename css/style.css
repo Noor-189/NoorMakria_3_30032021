@@ -240,12 +240,36 @@ button:hover {
   stroke: #9356DC;
   stroke-dasharray: 171;
   stroke-dashoffset: 171;
-  animation: animate-logo 2s linear forwards;
+  animation: animation-logo-spinner 2s linear forwards;
 }
 
-@keyframes spinner-final-index {}
-@keyframes spinner-disappear {}
-@keyframes animate-logo {}
+@keyframes spinner-final-index {
+  100% {
+    z-index: -99999;
+  }
+}
+@keyframes spinner-disappear {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes animation-logo-spinner {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 171;
+  }
+  80% {
+    stroke-dashoffset: 342;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 342;
+    fill: #9356DC;
+    stroke: #9356DC;
+  }
+}
 header {
   height: 50px;
 }

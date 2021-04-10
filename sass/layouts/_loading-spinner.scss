@@ -1,3 +1,4 @@
+// Animation avant d'arriver sur la page d'accueil
 .loading-spinner {
     background-color: $bg-color-pages;
     width: 100%;
@@ -19,42 +20,42 @@
             stroke-dasharray: 171; //création de pointillé plein
             // on augmente la valeur jusqu'a trouver celle qui fera en sorte qu'un seul pointillé soit de la taille totale du contour de l'icone (lettre par lettre)
             stroke-dashoffset: 171; //décallage du pointillé de 100% car même taille, on va avoir un pointillé blanc
-            animation: animate-logo 2s linear forwards; //animation du logo, dash puis remplissage
+            animation: animation-logo-spinner 2s linear forwards; //animation du logo, dash puis remplissage
         }
     }
 }
 
 @keyframes spinner-final-index {
     100% {
-        // z-index: -99999; // au bout de 9s le spinner passe derrière l'index
+        z-index: -99999; // au bout de 9s la div qui contient le logo spinner passe derrière la page index
     }
 }
-@keyframes spinner-disappear {
+@keyframes spinner-disappear { //
     100% {
-        // opacity: 0; //au bout de 3s le spinner disparait, sinon on le voit en arrière plan a cause de l'index
+        opacity: 0; //au bout de 3s la div spinner disparait, si on ne le fait pas on le voit toujours en arrière (index à -99999)
     }
 }
-@keyframes animate-logo { //l'animation du logo en lui même se fait en 2s
-    // 0% { // pas de décallage donc trait plein de base 
-    //     stroke-dashoffset: 0;
-    // }
-    // 40% { //
-    //     stroke-dashoffset: 171; // on fait entrer le pointillé vide et prend donc progressivement la place du pointillé plein
-    //                             // à 40% le pointillé vide remplace completement le pointillé plein
-    //                             // on efface le logo progressivement                     
-    // }
-    // 80% {
-    //     stroke-dashoffset: 342; // on fait entre le pointillé plein, on reecrit le logo progressivement
-    //     fill: transparent;
-    // }
-    // 100% {
-    //     stroke-dashoffset: 342;
-    //     fill: $primary-color;
-    //     stroke: $primary-color;
-    // }
+@keyframes animation-logo-spinner { //l'animation du logo en lui même se fait en 2s
+    0% {  
+        stroke-dashoffset: 0; // pas de décallage donc trait plein de base
+    }
+    40% { //
+        stroke-dashoffset: 171; // on fait entrer le pointillé vide et prend progressivement la place du pointillé plein
+                                // on efface le logo progressivement à 40% le pointillé vide remplace completement le pointillé plein                    
+    }
+    80% {
+        stroke-dashoffset: 342; // on fait entrer le pointillé plein, on reecrit le logo progressivement
+        fill: transparent; // pour que le remplissage ne se fasse qu'à partir de 80% jusqu'a 100% avec la couleur définie
+    }
+    100% {
+        stroke-dashoffset: 342;
+        fill: $primary-color; //couleur de remplissage
+        stroke: $primary-color; // couleur du contour
+    }
 }
-
-// Le logo s'affiche
-// Le logo s'efface
-// Le logo se réécrit
-// Le logo prend un fond de couleur
+// @keyframes animation-logo-spinner: 
+// Voici les étapes de ce qui se passe en 2s d'animation:
+// 0%: Le logo s'affiche puis commence à s'effacer progressivement
+// 40%: Le logo est effacé puis commence à se réecrire progressivement
+// 80%: Le logo est réécrit puis commence à prendre un fond de couleur
+// 100%: Le logo est réécrit avec un fond de couleur
