@@ -60,7 +60,7 @@
 }
 
 // code qui déclenche les animations check au hover de la carte (état final) //
-.menu-card { //.menu-card__check-anim//
+.menu-card {
     &:hover .bloc-animation__price {
         transform: translateX(-20px);
         @include mobile-only {
@@ -83,7 +83,6 @@
         }
     }
 }
-
 @keyframes check-rotation {
     100% {
         opacity: 1;
