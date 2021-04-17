@@ -372,7 +372,7 @@ header .logo img {
 .operation .operation-card-group .operation-card__description:hover div i {
   color: #9356DC;
 }
-.operation .operation-card-group .operation-card__description:hover h4 {
+.operation .operation-card-group .operation-card__description:hover h3 {
   color: #9356DC;
 }
 .operation .operation-card-group .operation-card__description div {
@@ -386,7 +386,7 @@ header .logo img {
   font-size: 19px;
   color: #777777;
 }
-.operation .operation-card-group .operation-card__description h4 {
+.operation .operation-card-group .operation-card__description h3 {
   padding-left: 20px;
 }
 
