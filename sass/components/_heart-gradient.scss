@@ -12,9 +12,13 @@
         -webkit-background-clip: text;
         color: transparent;
         opacity: 0;
+        -webkit-text-stroke: inherit; //prend le comportement de base
         &:hover {
             animation: plainHeart-appear 0.3s ease-out forwards;
         }
+    }
+    .far.fa-heart {
+        -webkit-text-stroke: inherit; //prend le comportement de base
     }
 }
 @keyframes plainHeart-appear {
