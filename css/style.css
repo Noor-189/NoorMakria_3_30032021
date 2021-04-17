@@ -50,7 +50,11 @@ p {
   font-size: 15px;
 }
 
-.menu-card h3 {
+.menu-restaurant h2 {
+  font-weight: 400;
+  font-size: 15px;
+}
+.menu-restaurant .menu-card h3 {
   font-weight: 600;
   font-size: 15px;
 }
@@ -592,12 +596,12 @@ main[class=pages] .banner-restaurant__title .container-pages {
   transform: translateY(10px);
   animation: menu-animation 0.6s 2.2s ease-out forwards;
 }
-.menu-restaurant > h3 {
+.menu-restaurant > h2 {
   position: relative;
   margin-bottom: 20px;
   padding-top: 20px;
 }
-.menu-restaurant > h3::after {
+.menu-restaurant > h2::after {
   content: "";
   position: absolute;
   left: 0;

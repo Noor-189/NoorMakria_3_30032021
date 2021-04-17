@@ -21,12 +21,19 @@ h4 {
 p {
     font-size: 15px;
 }
-.menu-card {
-    h3 {
-        font-weight: 600;
+.menu-restaurant {
+    h2 {
+        font-weight: 400;
         font-size: 15px;
     }
+    .menu-card {
+        h3 {
+            font-weight: 600;
+            font-size: 15px;
+        }
+    }    
 }
+
 footer {
     .logo-footer-title {
         font-family: 'Shrikhand', cursive, sans-serif;
