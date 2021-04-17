@@ -4,6 +4,7 @@ h1 {
     font-family: 'Shrikhand', cursive, sans-serif;
     font-weight: 300;
 }
+
 h2, h3, h4, p {
     font-family: 'Roboto', sans-serif;
 }
@@ -33,3 +34,13 @@ footer {
         font-size: 17px;  
     }    
 }  
+
+.location h1 {
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+}
+.location h2 {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}

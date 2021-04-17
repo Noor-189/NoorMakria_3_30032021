@@ -61,6 +61,17 @@ footer .logo-footer-title {
   font-size: 17px;
 }
 
+.location h1 {
+  font-weight: 800;
+  font-family: "Roboto", sans-serif;
+}
+
+.location h2 {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
 button {
   margin-bottom: 50px;
   border: none;
@@ -103,9 +114,13 @@ button:hover {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
+  -webkit-text-stroke: inherit;
 }
 .heart-logo .fas.fa-heart:hover {
   animation: plainHeart-appear 0.3s ease-out forwards;
+}
+.heart-logo .far.fa-heart {
+  -webkit-text-stroke: inherit;
 }
 
 @keyframes plainHeart-appear {
@@ -382,11 +397,11 @@ header .logo img {
 .location .current-location div {
   padding-right: 13px;
 }
-.location h2 {
+.location h1 {
   padding: 30px 0 10px 0;
   margin: 0 auto;
 }
-.location h3 {
+.location h2 {
   padding: 0 15px 25px 15px;
   font-size: 17px;
 }

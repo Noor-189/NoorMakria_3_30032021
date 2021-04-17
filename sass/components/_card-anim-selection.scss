@@ -8,21 +8,18 @@
     overflow: hidden;
     position: relative;
     &__text-description {
-        // background-color: violet;
         padding: 10px;
         @include mobile-only {
             width: 277px;
             transition: width 500ms ease-out;
         }
         p, h3 {
-            // background-color: cyan;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
         }
     }
     .bloc-animation__price {
-        // background-color: crimson;
         position: absolute;
         right: 30px;
         align-self: flex-end;
