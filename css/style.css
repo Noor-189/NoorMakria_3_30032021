@@ -72,6 +72,11 @@ footer .logo-footer-title {
   font-family: "Roboto", sans-serif;
 }
 
+.operation-card__description h3 {
+  font-size: 15px;
+  font-weight: 800;
+}
+
 button {
   margin-bottom: 50px;
   border: none;
